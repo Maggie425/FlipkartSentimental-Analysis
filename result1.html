@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Result</title>
+</head>
+<body>
+    <h1>Product Analysis</h1>
+    <h2>{{ title }}</h2>
+    <img src="{{ image_url }}" alt="Product Image" style="width:300px;height:300px;">
+    <p>Rating: {{ rating }}</p>
+    <h3>Sentiment Analysis</h3>
+    <img src="data:image/png;base64,{{ plot_url }}" alt="Sentiment Pie Chart">
+    <h3>Top Reviews</h3>
+    <ul>
+        {% for review in reviews %}
+        <li>{{ review }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Go Back</a>
+</body>
+</html>
